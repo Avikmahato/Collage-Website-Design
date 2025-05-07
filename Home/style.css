@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Faustina:ital,wght@0,300..800;1,300..800&family=Gelasio:ital,wght@0,400..700;1,400..700&family=Grechen+Fuemen&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=New+Rocker&family=Oswald:wght@200..700&family=Permanent+Marker&family=Shippori+Mincho&family=Sigmar&family=Sour+Gummy&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --icon: 45px;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+
+#menu {
+    font-size: 30px;
+    width: 30px;
+    color: rgb(233, 255, 255);
+    cursor: pointer;
+}
+
+header {
+    width: auto;
+    background-color: rgb(12, 33, 59);
+    font-family: "audiowide";
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 3rem;
+    padding: 0rem 5rem;
+    color: white;
+    border-bottom: 10px groove rgb(122, 175, 219);
+    text-shadow: 4px 4px 1px black;
+}
+
+header big {
+    width: auto;
+    font-size: 4em;
+}
+
+header small {
+    width: auto;
+    font-size: 1em;
+    transform: translate(-.1rem, -.9rem);
+}
+
+nav {
+    width: 100dvw;
+    height: auto;
+    background-color: rgb(22, 82, 160);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0rem 1rem;
+    position: relative;
+}
+
+nav ul {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
+    list-style: none;
+    opacity: .8;
+    color: white;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+nav label {
+    border: 3px groove rgb(207, 255, 247);
+    border-radius: 10px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0rem.3rem;
+    margin: .2rem 0rem;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+nav label p {
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    text-shadow: 1px 1px 10px rgba(13, 30, 85, 0.377);
+}
+
+nav img {
+    width: 50px;
+    border-radius: 3px;
+    margin: .3rem 0rem;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+nav h4 {
+    font-family: 'Gill Sans', 'Gill Sans MT';
+    font-size: 1.8rem;
+}
+
+nav ul li:hover {
+    color: yellow;
+    opacity: 1;
+}
+
+#resp {
+    width: fit-content;
+    min-height: 200px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 0%;
+    top: 100%;
+    justify-content: space-between;
+    color: black;
+    padding: .3rem .5rem;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    transform: translateX(-400px);
+    opacity: 0;
+    transition: .5s ease-in-out;
+}
+
+.login button {
+    width: 5rem;
+    min-height: 2rem;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    margin: 0rem 1rem;
+    transition: .5s ease-in-out;
+    z-index: 121;
+}
+
+.login button::after {
+    width: 100%;
+    content: "Login";
+    background-color: rgb(13, 70, 59);
+    color: white;
+    top: 50%;
+    left: 50%;
+    padding: .1rem .8rem;
+    border-radius: 5px;
+    transform: translate(-50%, 0px);
+    visibility: hidden;
+    z-index: -1;
+    opacity: .5;
+    position: absolute;
+    transition: .6s;
+}
+
+.login button:hover::after {
+    visibility: visible;
+    transform: translate(-50%, 30px);
+    opacity: 1;
+    z-index: 0;
+}
+
+.login button:hover {
+    background-color: aquamarine;
+}
+
+/* main */
+main {
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+aside {
+    width: fit-content;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: .5rem .8rem;
+    backdrop-filter: blur(10px);
+    transform: translateX(-200px);
+    transition: .3s ease-out;
+    position: absolute;
+    border-right: 3px ridge rgb(22, 82, 160);
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.632);
+    z-index: 999;
+}
+
+aside div:nth-child(1) {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+}
+
+#close {
+    font-size: 2rem;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    align-content: center;
+    border-radius: 20%;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+#close:hover {
+    background-color: black;
+    color: white;
+}
+
+aside a {
+    width: auto;
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgb(35, 33, 33);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 600;
+    transition: 400ms ease-out .2s traslate;
+}
+
+aside a:hover {
+    width: fit-content;
+    color: black;
+    transform: translateX(2px);
+}
+
+/* Image Sliders */
+
+.imagesetup {
+    width: 100dvw;
+    height: 500px;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.frame {
+    width: 800px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+.photo {
+    width: 800px;
+    height: auto;
+    display: flex;
+    transition: .6s ease-out;
+}
+
+.photo img {
+    width: 800px;
+    background-position: 100% 100%;
+    background-size: 100% 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.205) 2px 7px 4px;
+}
+
+.left img {
+    width: var(--icon);
+    transform: rotate(180deg);
+    cursor: pointer;
+    margin: 0rem .6rem;
+}
+
+.right img {
+    cursor: pointer;
+    width: var(--icon);
+    margin: 0rem .6rem;
+}
+/* Student Informations */
+.student{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.student_profile{
+    min-width: 900px;
+    justify-content: center;
+    display: flex;
+    margin: 4rem 0rem;
+    font-family: 'Courier New';
+    font-size: 1.2rem;
+    border-radius: 12px;
+    background-color: rgb(224, 241, 255);
+    border: 2px ridge rgb(190, 255, 190);
+}
+.details div:nth-child(3){
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.details div{
+    display: flex;
+    gap: 1rem;
+}
+.details input{
+    border-radius: 5px;
+    padding: .2rem .5rem;
+    transition: .4s ease-out;
+}
+.details input:hover{
+    background-color: rgb(241, 255, 254);
+    transform: translateX(2px);
+}
+.details p,label{
+    font-weight: 600;
+}
+#genderdiv{
+    display: flex;
+    gap: .7rem;
+}
+#genderdiv p{
+    font-weight: 600;
+}
+#genderdiv div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+#save{
+    display: flex;
+    justify-content: center;
+}
+#save input{
+    width: 6rem;
+    height: 2rem;
+    font-family: "Fausina";
+    background-color: rgb(214, 255, 252);
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#save input:active{
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.336);
+    transform: scale(1.1);
+}
+.picture{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    border-bottom-left-radius: 12px;
+    background-color: rgb(204, 211, 255);
+    font-family: "Faustina";
+    border-top-left-radius: 12px;
+    padding: 1rem 1rem;
+}
+#profile{
+    width:350px;
+    border-radius: 12px;
+    border: 2px groove lightcyan;
+    position: relative;
+}
+.image p{
+    font-size: 1.12rem;
+}
+.editable_image{
+    position: relative;
+}
+#edit{
+    width: 40px;
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+    padding: 1rem 1rem;
+    font-family: "Faustina";
+}
+@media(width<=1080px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #respon:checked+#resp {
+        transform: translateX(0px);
+        opacity: 1;
+        z-index: 122;
+    }
+
+    nav ul {
+        display: none;
+    }
+}
+.notices{
+    display: block;
+}
