@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+}
+main{
+    background-color: rgb(12, 33, 59);
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ul li {
+    width: 220px;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    gap: 10px;
+    cursor: pointer;
+    animation: .4s anim 1;
+}
+li a{
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    cursor:pointer;
+}
+ul li:hover {
+    background-color: antiquewhite;
+}
+
+nav {
+    width: 160px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-top: 1px solid rgb(0, 0, 0);
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.842);
+}
+nav .search{
+    width: 100vw;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-right: 30px;
+    gap: 10px;
+}
+.search i{
+    font-size: 20px;
+}
+@keyframes anim{
+    from{
+        transform: translateX(-200px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+ul {
+    display: flex;
+    gap: 0px;
+}
+.container1{
+    height: 430px;
+    width: 100vw;
+    max-width: 370px;
+    border: 2px inset black;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.842);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.container2{
+    height: 430px;
+    width: 100vw;
+    max-width: 370px;
+    border: 2px inset black;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.822);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.student_id i,.password i,.mobile i,.email i,.student_reg i,.semail i{
+    width: 40px;
+    text-align: center;
+    align-content: center;
+    height: 40px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: rgb(142, 229, 255);
+    border-radius: 50%;
+}
+#student_id,#password,#email,#mobile,#student_reg,#semail{
+    height: 30px;
+    width: 250px;
+    border-radius: 7px;
+    text-align: center;
+}
+#student_id{
+    animation: .4s fromright;
+    z-index: -1;
+}
+#mobile{
+    animation: .4s fromright;
+    z-index: -1;
+}
+#semail{
+    animation: .4s fromright;
+    z-index: -1;
+}
+#password{
+    animation: .4s fromleft;
+    z-index: -1;
+}
+#student_reg{
+    animation: .4s fromleft;
+    z-index: -1;
+}
+#email{
+    animation: .4s fromleft;
+    z-index: -1;
+}
+.student_id i{
+    transform: translateX(30px);
+}
+.mobile i{
+    transform: translateX(30px);
+}
+.semail i{
+    transform: translateX(30px);
+}
+.password i{
+    transform: translateX(-30px);
+}
+.student_reg i{
+    transform: translateX(-30px);
+}
+.email i{
+    transform: translateX(-30px);
+}
+.student_id div{
+    transform: translateX(-20px);
+    display: flex;
+    align-items: center;
+    caret: none;
+}
+.mobile div{
+    transform: translateX(-20px);
+    display: flex;
+    align-items: center;
+    caret: none;
+}
+.semail div{
+    transform: translateX(-20px);
+    display: flex;
+    align-items: center;
+    caret: none;
+}
+.email div{
+    transform: translateX(20px);
+    display: flex;
+    align-items: center;
+    caret: none;
+}
+.password div{
+    transform: translateX(20px);
+    display: flex;
+    align-items: center;
+    caret: none;
+}
+.student_reg div{
+    transform: translateX(20px);
+    display: flex;
+    align-items: center;
+    caret: none;
+}
+.login button{
+    width: 120px;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    border: 2px outset black;
+    border-radius: 5px;
+}
+.login button:hover{
+    background-color: antiquewhite;
+}
+@keyframes fromleft{
+    from{
+        transform: translateX(-100px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+@keyframes fromright{
+    from{
+        transform: translateX(100px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+#search{
+    height: 20px;
+    border-radius: 5px;
+    text-align: center;
+    outline: none;
+    border: 1px solid rgb(74, 121, 107);
+    animation: .4s fromright 1;
+}
+.search i{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    align-content: center;
+    text-align: center;
+    color: white;
+    background-color: rgb(41, 56, 121);
+    cursor: pointer;
+}
+#switch{
+    font-size: 20px;
+    width: 120px;
+    text-transform: uppercase;
+    height: 35px;
+    color: rgb(21, 27, 27);
+    border: 2px inset rgb(255, 255, 255);
+    border-radius: 5px;
+}
+#switch:hover{
+    background-color: #EEF1DA;
+}
+.login{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
